@@ -91,8 +91,8 @@ const server=app.listen(PORT,()=>{
     console.log(`Server is running in ${process.env.NODE_ENV} mode on port ${PORT}!...`.yellow.bold);
 });
 
-//Handle unhandled promise rejection -> As Instance when we enter wrong password into database
-process.on("unhandledRejection",(err,promise)=>{
+//Handle unhandled promise rejection ----------> Here .on method listen for unhandled rejections
+process.on("unhandledRejection",(err,promise)=>{// specially when database password wrong because at where we haven't handled exceptions
     console.log(`Unhandled Rejection Error: ${err.massage}`.red);
     console.log(`Unhandled Rejection Error: ${err}`.red);
     console.log(`Unhandled Rejection Error: ${err.stack}`.red);

@@ -2,7 +2,7 @@ const crypto=require("crypto");//node core module to generate token for forgot p
 const mongoose=require("mongoose");
 const bcrypt=require("bcryptjs");
 const jwt=require("jsonwebtoken");
-const { nextTick } = require("process");
+
 
 const UserSchema=new mongoose.Schema({
     name:{
