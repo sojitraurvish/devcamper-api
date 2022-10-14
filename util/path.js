@@ -29,6 +29,27 @@ module.exports.rootDir=path.dirname(process.mainModule.filename);
 //     next(); 
 // }
 
+// https://www.restapitutorial.com/httpstatuscodes.html
+
+// .populate("users", "-password").populate("latestMessage")
+//             .populate({
+//                 path: "users",
+//                 select: "username",
+//                 populate: {
+//                     path: "latestMessage",
+//                     select: "filed",
+//                     populate: {
+//                         path: "latestMessage",
+//                         select: "filed"
+//                     }
+//                 },
+//             })
+
+// console.log("1" + req.headers.user)
+//             console.log("2" + req.header("user"));
+//             const { user } = req.headers;
+//             console.log("3" + user);
+
 // Path for root directory
 const rootDir=path.dirname(process.mainModule.filename);
 
